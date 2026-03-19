@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>타이어핑 최저가 봇 - 설치</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "맑은 고딕", sans-serif; background: #f5f5f5; }
+.wrap { max-width: 640px; margin: 50px auto; padding: 0 20px; }
+.hero { background: #1a1a2e; color: white; border-radius: 12px; padding: 28px 32px; margin-bottom: 20px; }
+.hero h1 { font-size: 22px; margin-bottom: 6px; }
+.hero p { font-size: 13px; opacity: 0.7; }
+.badge { display: inline-block; background: #4f46e5; color: white; padding: 2px 12px; border-radius: 20px; font-size: 12px; margin-left: 8px; vertical-align: middle; }
+.card { background: white; border-radius: 10px; padding: 20px 24px; margin-bottom: 14px; border: 1px solid #e5e7eb; }
+.card h3 { font-size: 15px; color: #1e3a8a; margin-bottom: 12px; }
+ol { padding-left: 20px; }
+ol li { font-size: 13px; line-height: 2; color: #374151; }
+.btn-dl { display: inline-block; background: #2563eb; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin: 8px 0; }
+.btn-dl:hover { background: #1d4ed8; }
+code { background: #f3f4f6; padding: 2px 7px; border-radius: 4px; font-size: 12px; }
+.warn { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #92400e; margin-bottom: 16px; }
+.update-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #166534; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>🏎 타이어핑 최저가 봇 <span class="badge" id="ver">v1.0</span></h1>
+    <p>경쟁가 자동조회 · 가격변경 · 상품 자동등록 크롬 확장</p>
+  </div>
+
+  <div class="warn">
+    ⚠️ <b>타이어핑 계정 보유자만 사용 가능합니다.</b><br>
+    크롬에서 www.tireping.com 에 먼저 로그인 후 사용하세요.
+  </div>
+
+  <div class="card">
+    <h3>📦 설치 방법</h3>
+    <ol>
+      <li><a class="btn-dl" href="tireping_ext.crx" download>⬇ 확장 파일 다운로드</a></li>
+      <li>크롬 주소창에 <code>chrome://extensions</code> 입력 후 Enter</li>
+      <li>우측 상단 <b>개발자 모드</b> 켜기</li>
+      <li>다운로드한 <code>tireping_ext.crx</code> 파일을 페이지에 <b>드래그 앤 드롭</b></li>
+      <li><b>확장 프로그램 추가</b> 클릭 ✅</li>
+      <li>타이어핑 로그인 후 우측 상단 확장 아이콘 클릭 → 사이드패널 열림</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>🔄 업데이트 방법</h3>
+    <div class="update-box">
+      <ol>
+        <li>크롬 주소창에 <code>chrome://extensions</code> 입력</li>
+        <li>우측 상단 <b>개발자 모드</b> ON 확인</li>
+        <li>좌측 상단 <b>업데이트</b> 버튼 클릭 → 자동 완료 ✅</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<script>
+fetch("update.xml").then(r=>r.text()).then(xml=>{
+  const m = xml.match(/version='([^']+)'/);
+  if(m) document.getElementById("ver").textContent = "v"+m[1];
+}).catch(()=>{});
+</script>
+</body>
+</html>
