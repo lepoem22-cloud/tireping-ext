@@ -2,7 +2,7 @@
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='objeoiepggbdhfhpmddpickhopaahdfo'>
     <updatecheck
-      codebase='https://GITHUB_USERNAME.github.io/tireping-ext/tireping_ext.crx'
+      codebase='https://lepoem22-cloud.github.io/tireping-ext/tireping_ext.crx'
       version='1.0' />
   </app>
 </gupdate>
