@@ -14,12 +14,13 @@ body { font-family: "맑은 고딕", sans-serif; background: #f5f5f5; }
 .card { background: white; border-radius: 10px; padding: 20px 24px; margin-bottom: 14px; border: 1px solid #e5e7eb; }
 .card h3 { font-size: 15px; color: #1e3a8a; margin-bottom: 12px; }
 ol { padding-left: 20px; }
-ol li { font-size: 13px; line-height: 2; color: #374151; }
-.btn-dl { display: inline-block; background: #2563eb; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin: 8px 0; }
+ol li { font-size: 13px; line-height: 2.2; color: #374151; }
+.btn-dl { display: inline-block; background: #2563eb; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; margin: 6px 4px 6px 0; }
 .btn-dl:hover { background: #1d4ed8; }
-code { background: #f3f4f6; padding: 2px 7px; border-radius: 4px; font-size: 12px; }
+code { background: #f3f4f6; padding: 2px 7px; border-radius: 4px; font-size: 12px; font-family: monospace; }
 .warn { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #92400e; margin-bottom: 16px; }
-.update-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #166534; }
+.update-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 16px; }
+.tip { font-size: 12px; color: #6b7280; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -35,14 +36,15 @@ code { background: #f3f4f6; padding: 2px 7px; border-radius: 4px; font-size: 12p
   </div>
 
   <div class="card">
-    <h3>📦 설치 방법</h3>
-    <ol>
-      <li><a class="btn-dl" href="tireping_ext.crx" download>⬇ 확장 파일 다운로드</a></li>
+    <h3>📦 최초 설치 방법</h3>
+    <a class="btn-dl" href="tireping_ext_final.zip" download>⬇ ZIP 다운로드</a>
+    <ol style="margin-top:14px;">
+      <li>위 ZIP 파일 다운로드 후 <b>압축 해제</b> → <code>tireping_ext</code> 폴더 생성</li>
       <li>크롬 주소창에 <code>chrome://extensions</code> 입력 후 Enter</li>
       <li>우측 상단 <b>개발자 모드</b> 켜기</li>
-      <li>다운로드한 <code>tireping_ext.crx</code> 파일을 페이지에 <b>드래그 앤 드롭</b></li>
-      <li><b>확장 프로그램 추가</b> 클릭 ✅</li>
-      <li>타이어핑 로그인 후 우측 상단 확장 아이콘 클릭 → 사이드패널 열림</li>
+      <li><b>"압축해제된 확장 프로그램을 로드합니다"</b> 클릭</li>
+      <li><code>tireping_ext</code> 폴더 선택</li>
+      <li>타이어핑 로그인 후 확장 아이콘 클릭 → 사이드패널 열림 ✅</li>
     </ol>
   </div>
 
@@ -54,6 +56,7 @@ code { background: #f3f4f6; padding: 2px 7px; border-radius: 4px; font-size: 12p
         <li>우측 상단 <b>개발자 모드</b> ON 확인</li>
         <li>좌측 상단 <b>업데이트</b> 버튼 클릭 → 자동 완료 ✅</li>
       </ol>
+      <p class="tip">※ 업데이트 공지 후 위 방법대로 진행해주세요.</p>
     </div>
   </div>
 </div>
